@@ -16,7 +16,7 @@ export const siteSeoOpenGraphBase = {
     type: 'website',
     images: [
         {
-            url: 'https://www.example.com/images/og-image.jpg',
+            url: 'https://www.sotrade.one/images/og-image.jpg',
             width: 850,
             height: 650,
             alt: 'Og Image Alt'
