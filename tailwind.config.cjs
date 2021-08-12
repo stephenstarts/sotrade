@@ -2,8 +2,8 @@ const { tailwindExtractor } = require('tailwindcss/lib/lib/purgeUnusedStyles');
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
 module.exports = {
+	mode: 'jit',
 	purge: {
-        mode: 'jit',
 		content: ['./src/**/*.{html,js,svelte,ts}'],
 		options: {
 			defaultExtractor: (content) => [
