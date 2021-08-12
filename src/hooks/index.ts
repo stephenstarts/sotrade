@@ -19,7 +19,7 @@ export async function handle({ request, resolve }: { request: Request, resolve: 
 		...response,
 		headers: {
 			...response.headers,
-			'x-custom-header': 'svelte-starter-kit'
+			'x-custom-header': 'sotrade'
 		}
 	};
 }

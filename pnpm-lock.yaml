@@ -4,6 +4,7 @@ specifiers:
   '@supabase/supabase-js': ^1.8.0
   '@sveltejs/adapter-node': ^1.0.0-next.24
   '@sveltejs/adapter-static': ^1.0.0-next.0
+  '@sveltejs/adapter-vercel': next
   '@sveltejs/kit': ^1.0.0-next.85
   '@typescript-eslint/eslint-plugin': ^4.19.0
   '@typescript-eslint/parser': ^4.19.0
@@ -33,6 +34,7 @@ devDependencies:
   '@supabase/supabase-js': 1.21.1
   '@sveltejs/adapter-node': 1.0.0-next.39
   '@sveltejs/adapter-static': 1.0.0-next.0
+  '@sveltejs/adapter-vercel': 1.0.0-next.27
   '@sveltejs/kit': 1.0.0-next.146_svelte@3.42.1
   '@typescript-eslint/eslint-plugin': 4.29.1_d4376362794b743c19f4cba25c7fc6f5
   '@typescript-eslint/parser': 4.29.1_eslint@7.32.0+typescript@4.3.5
@@ -184,6 +186,12 @@ packages:
 
   /@sveltejs/adapter-static/1.0.0-next.0:
     resolution: {integrity: sha512-5QYrPSjfqI/Jd2av/WuwhZjRZHaWu8tGmBHM6dh5W7cd4s0PG3eW0p4eASZESHmtCFWGG00PYMRjUUFPPtEcOg==}
+    dev: true
+
+  /@sveltejs/adapter-vercel/1.0.0-next.27:
+    resolution: {integrity: sha512-KiGDJXgjkj3MJvmQLXpE7pfQnN7dVx8pPgqcrFp8yziFrLMrvluklKmNqNei6JivQn5JVYxLojRgHpik1fdIOw==}
+    dependencies:
+      esbuild: 0.12.19
     dev: true
 
   /@sveltejs/kit/1.0.0-next.146_svelte@3.42.1:

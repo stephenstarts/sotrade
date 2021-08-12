@@ -3,15 +3,15 @@ export const config = {
 }
 
 export const siteSeoBase = {
-    title: 'Svelte Starter Kit',
-    description: 'Svelte with brilliant bells and useful whistles',
-    keywords: 'svelte, svelte-kit, starter-kit, typescript, supabase',
-    canonical: import.meta.env ? import.meta.env.VITE_SITE_URL : 'https://www.example.com'
+    title: 'SoTrade.One',
+    description: 'Stock and Options trade log platform',
+    keywords: 'stocks, options, stock market, trading',
+    canonical: import.meta.env ? import.meta.env.VITE_SITE_URL : 'https://www.sotrade.one'
 };
 
 export const siteSeoOpenGraphBase = {
-    title: 'Svelte Starter Kit',
-    description: 'Svelte with brilliant bells and useful whistles',
+    title: 'SoTrade.One',
+    description: 'Stock and Options trade log platform',
     url: import.meta.env ? import.meta.env.VITE_SITE_URL : '',
     type: 'website',
     images: [
