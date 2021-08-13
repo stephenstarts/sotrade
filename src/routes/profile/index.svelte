@@ -72,7 +72,7 @@
             avatar_url = await getAvatar(avatar_url)
             profileState = { username, website, avatar_url, enabled, beta, dev }
             profile.set({ ...profileState })
-            console.log(profile)
+            console.log(profileState)
         } catch (error) {
             handleAlert({ type: 'error', text: error.message })
         } finally {
