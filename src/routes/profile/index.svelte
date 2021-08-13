@@ -55,21 +55,24 @@
     let profileState: ProfileAttrs = {
         username: '',
         website: '',
-        avatar_url: ''
+        avatar_url: '',
+        enabled: true,
+        beta: false,
+        dev: false
     }
 
     async function getProfile() {
         try {
             loading = true
-            let { data: { username, website, avatar_url } , error } = await getCurrUserProfile()
+            let { data: { username, website, avatar_url, enabled, beta, dev} , error } = await getCurrUserProfile()
             if (error) {
                 handleAlert({ type: 'default', text: 'First login? Could you please update your profile? 🙂' })
             }
 
             avatar_url = await getAvatar(avatar_url)
-            profileState = { username, website, avatar_url }
+            profileState = { username, website, avatar_url, enabled, beta, dev }
             profile.set({ ...profileState })
-
+            console.log(profile)
         } catch (error) {
             handleAlert({ type: 'error', text: error.message })
         } finally {

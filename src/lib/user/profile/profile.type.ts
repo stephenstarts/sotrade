@@ -4,4 +4,7 @@ export type ProfileAttrs = {
     website?: string,
     // twitter_handle?: string
     avatar_url?:string,
+    enabled?:boolean,
+    beta?:boolean,
+    dev?:boolean,
 }
