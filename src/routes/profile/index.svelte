@@ -86,7 +86,7 @@
         try {
             loading = true
 
-            let { data: [{ username, website }], error: updateError } = await updCurrUserProfile({
+            let { data: [{ username, website, fName, lName }], error: updateError } = await updCurrUserProfile({
                 username: profileState.username,
                 website: profileState.website,
                 fName: profileState.fName,
@@ -96,7 +96,7 @@
                 throw updateError
             }
 
-            profile.update((profile) => ({ ...profile, username, website }))
+            profile.update((profile) => ({ ...profile, username, website, fName, lName }))
 
         } catch (error) {
             handleAlert({ type: 'error', text: error.message })
