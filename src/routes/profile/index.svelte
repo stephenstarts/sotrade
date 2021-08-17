@@ -58,7 +58,9 @@
         avatar_url: '',
         enabled: true,
         beta: false,
-        dev: false
+        dev: false,
+        fName: '',
+        lName: ''
     }
 
     async function getProfile() {
