@@ -70,7 +70,7 @@
             }
 
             avatar_url = await getAvatar(avatar_url)
-            profileState = { username, website, avatar_url, enabled, beta, dev }
+            profileState = { username, website, avatar_url, enabled, beta, dev, fName, lName }
             profile.set({ ...profileState })
             console.log(profileState)
         } catch (error) {
@@ -86,7 +86,9 @@
 
             let { data: [{ username, website }], error: updateError } = await updCurrUserProfile({
                 username: profileState.username,
-                website: profileState.website
+                website: profileState.website,
+                fName: profileState.fName,
+                lName: profileState.lName
             })
             if (updateError) {
                 throw updateError
