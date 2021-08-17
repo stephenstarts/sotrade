@@ -7,4 +7,6 @@ export type ProfileAttrs = {
     enabled?:boolean,
     beta?:boolean,
     dev?:boolean,
+    fName?:string,
+    lName?:string,
 }

@@ -64,7 +64,7 @@
     async function getProfile() {
         try {
             loading = true
-            let { data: { username, website, avatar_url, enabled, beta, dev} , error } = await getCurrUserProfile()
+            let { data: { username, website, avatar_url, enabled, beta, dev, fName, lName} , error } = await getCurrUserProfile()
             if (error) {
                 handleAlert({ type: 'default', text: 'First login? Could you please update your profile? 🙂' })
             }
@@ -147,6 +147,7 @@
       </div>
     <div class="profile-detail my-4" on:click={toggleModal}>
         <h2 class="text-4xl mb-1">Howdie, { username }!</h2>
+        <span class="inline-block">{$profile.fName} {$profile.lName}</span>
         <span class="inline-block px-2 py-1 bg-gray-400 text-white rounded-full"><ChromeIcon class="inline-block" size="1x"/> {$profile.website}</span>
         <div class="text-gray-500 text-sm my-1">(click to update)</div>
     </div>
@@ -181,6 +182,30 @@
                 placeholder="Your Username"
                 required
                 bind:value={profileState.username}
+                />
+            </div>
+            <div class="mb-4">
+                <label for="firstname" class="block text-green-100 mb-2 text-left">First Name</label>
+                <input
+                id="firstname"
+                name="firstname"
+                type="text"
+                class="h-12 px-4 py-2 bg-white rounded shadow-inner border-gray-300 w-full border  hover:border-gray-400 text-gray-700"
+                placeholder="Your First Name"
+                required
+                bind:value={profileState.fName}
+                />
+            </div>
+            <div class="mb-4">
+                <label for="lastname" class="block text-green-100 mb-2 text-left">Last Name</label>
+                <input
+                id="lastname"
+                name="lastname"
+                type="text"
+                class="h-12 px-4 py-2 bg-white rounded shadow-inner border-gray-300 w-full border  hover:border-gray-400 text-gray-700"
+                placeholder="Your Last Name"
+                required
+                bind:value={profileState.lName}
                 />
             </div>
             <div class="mb-4">
